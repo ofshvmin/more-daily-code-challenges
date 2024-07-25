@@ -19,7 +19,16 @@ twoSum([8,7], 16) //=> 'No Sum'
 -----------------------------------------------------------------------------*/
 // Your solution for 01- here:
 
-
+function twoSum(arr, target) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr.length; j++) {
+      if(i != j && arr[i] + arr[j] === target) {
+        return [i, j]
+      } 
+    }
+  }
+  return 'No Sum'
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 02 - compareTriplets
