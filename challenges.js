@@ -125,7 +125,22 @@ Their ratios are 2/5 (0.400000), 2/5 (0.400000), and 1/5 (0.200000).
 -----------------------------------------------------------------------------*/
 // Your solution for 04- here:
 
-
+function plusMinus(arr) {
+  let posCount = 0
+  let negCount = 0
+  let zeroCount = 0
+  arr.forEach(element => {
+    if(element > 0) posCount++
+    if(element < 0) negCount++
+    if(element === 0) zeroCount++
+  });
+  // return [posCount, negCount, zeroCount]
+  return [
+    (posCount/(posCount + negCount + zeroCount)).toFixed(6),
+    (negCount/(posCount + negCount + zeroCount)).toFixed(6),
+    (zeroCount/(posCount + negCount + zeroCount)).toFixed(6)
+  ]
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 05 - staircase
